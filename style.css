@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2em;
+    color: #004E8C;
+}
+
+.inta-logo {
+    height: 50px;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 90px);
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #004E8C;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilos para el Menú Desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: #004E8C;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003a66;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 100%;
+    top: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #005a9e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn .fa-caret-down {
+    float: right;
+    margin-top: 3px;
+}
+
+/* Estilos para las Tarjetas */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+    max-width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #004E8C;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-title {
+        margin-bottom: 10px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 15%;
+        height: auto;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .dropdown-content {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+    }
+    .dropbtn {
+        text-align: center;
+    }
+    .dropbtn .fa-caret-down {
+        float: none;
+        margin-left: 10px;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+/* Estilos específicos para las páginas de detalle (como olivo.html) */
+.main-content.detail-page {
+    max-width: 900px; /* Limita el ancho del contenido principal en estas páginas */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.section-title {
+    color: #004E8C;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.intro-text {
+    text-align: justify;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    padding: 0 20px; /* Pequeño padding para que no toque los bordes */
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2 o 3 columnas */
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.service-item h3 {
+    color: #004E8C;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.service-item p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.service-item .icon-primary {
+    font-size: 3em;
+    color: #005a9e; /* Un tono de azul ligeramente diferente para los iconos */
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px; /* Limita el ancho del bloque de contacto */
+    margin: 0 auto 50px auto; /* Centra el bloque y añade margen inferior */
+}
+
+.contact-info h3 {
+    color: #004E8C;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #004E8C;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info .icon-secondary {
+    font-size: 1.5em;
+    color: #005a9e;
+    margin-right: 10px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+    .intro-text {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+    .services-list {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        padding: 0 10px;
+    }
+    .service-item {
+        padding: 20px;
+    }
+    .contact-info {
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+/* Animación de entrada y salida para fundido suave */
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 1;
+}
+/* Elimina el subrayado de los enlaces que actúan como tarjetas */
+.card {
+    text-decoration: none;
+}

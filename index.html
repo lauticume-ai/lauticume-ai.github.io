@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de INTA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-title">Servicios de INTA</h1>
+        <img src="img/logo-inta.png.png" alt="Logo de INTA" class="inta-logo">
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="dropdown">
+                <button class="dropbtn">Laboratorios <i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="laboratorio_microbiologia.html">Laboratorio de Microbiología Enológica</a>
+                    <a href="laboratorio_biotecnologia.html">Laboratorio de Biotecnología</a>
+                    <a href="laboratorio_fitopatologia.html">Laboratorio de Fitopatología</a>
+                    <a href="laboratorio_suelo.html">Laboratorio de Suelo</a>
+                    <a href="laboratorio_aromas.html">Laboratorio de Aromas y Productos Alimenticios</a>
+                    <a href="laboratorio_poscosecha.html">Laboratorio de Poscosecha</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <p class="description">En este espacio usted podrá encontrar los servicios que INTA brinda a la comunidad. Seleccione una temática:</p>
+
+            <div class="card-grid">
+                <a href="olivo.html" class="card">
+                    <img src="img/olivos.png" alt="Olivo">
+                    <h3>Olivo</h3>
+                </a>
+                <a href="vino.html" class="card">
+                    <img src="img/vino.png" alt="Vino">
+                    <h3>Vino</h3>
+                </a>
+                <a href="hortalizas.html" class="card">
+                    <img src="img/verduras.png" alt="Hortalizas">
+                    <h3>Hortalizas</h3>
+                </a>
+                <a href="frutas.html" class="card">
+                    <img src="img/fruta.png" alt="Frutas">
+                    <h3>Frutas</h3>
+                </a>
+                <a href="hongos.html" class="card">
+                    <img src="img/champinon.png" alt="Hongos">
+                    <h3>Hongos</h3>
+                </a>
+                <a href="aromaticas.html" class="card">
+                    <img src="img/romero.png" alt="Aromáticas">
+                    <h3>Aromáticas</h3>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+        });
+
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    document.body.classList.remove('loaded');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>

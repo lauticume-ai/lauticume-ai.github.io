@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de INTA - Olivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-title">Servicios de INTA</h1>
+        <img src="img/logo-inta.png.png" alt="Logo de INTA" class="inta-logo">
+    </header>
+
+    <div class="container">
+        <main class="main-content detail-page">
+            <h2 class="section-title">Servicios para el Cultivo de Olivo</h2>
+            <p class="intro-text">
+                El laboratorio de Olivo del INTA ofrece análisis y asesoramiento técnico especializado para productores, industrias y organismos públicos. Nuestro objetivo es optimizar el rendimiento y la calidad del olivo en todas sus etapas.
+            </p>
+
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-seedling icon-primary"></i>
+                    <h3>Análisis de Suelo y Foliar</h3>
+                    <p>Determinación de nutrientes, pH, salinidad para optimizar la fertilización y la salud del cultivo.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-flask icon-primary"></i>
+                    <h3>Calidad de Aceite de Oliva</h3>
+                    <p>Análisis físico-químicos y organolépticos para clasificar el aceite virgen extra, virgen y lampante.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-leaf icon-primary"></i>
+                    <h3>Diagnóstico Fitosanitario</h3>
+                    <p>Identificación de plagas y enfermedades del olivo, y recomendación de estrategias de manejo.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cogs icon-primary"></i>
+                    <h3>Asesoramiento en Poscosecha</h3>
+                    <p>Optimización de procesos de recolección, extracción y almacenamiento para maximizar la calidad.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-microscope icon-primary"></i>
+                    <h3>Biotecnología y Mejora Genética</h3>
+                    <p>Investigación y desarrollo de nuevas variedades adaptadas a diferentes condiciones ambientales.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chart-line icon-primary"></i>
+                    <h3>Capacitación y Extensión</h3>
+                    <p>Talleres y seminarios para productores sobre buenas prácticas agrícolas y nuevas tecnologías.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contacto del Laboratorio de Olivo</h3>
+                <p><i class="fas fa-envelope icon-secondary"></i> Correo: <a href="mailto:laboratorio.olivo@inta.gob.ar">laboratorio.olivo@inta.gob.ar</a></p>
+                <p><i class="fas fa-phone icon-secondary"></i> Teléfono: +54 261 555-1234</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('loaded');
+    });
+
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            // Verifica que el enlace no sea un marcador de posición ('#')
+            if (href && href !== '#') {
+                e.preventDefault();
+                document.body.classList.remove('loaded');
+                setTimeout(() => {
+                    // Carga la nueva página en la misma pestaña
+                    window.location.href = href;
+                }, 400); 
+            }
+        });
+    });
+</script>
+</body>
+</html>

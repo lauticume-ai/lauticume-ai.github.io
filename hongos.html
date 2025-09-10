@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de INTA - Hongos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-title">Servicios de INTA</h1>
+        <img src="img/logo-inta.png.png" alt="Logo de INTA" class="inta-logo">
+    </header>
+
+    <div class="container">
+        
+        <main class="main-content detail-page">
+            <h2 class="section-title">Servicios para la Producción de Hongos</h2>
+            <p class="intro-text">
+                El área de Micología del INTA se especializa en la investigación y desarrollo de tecnologías para el cultivo de hongos comestibles y medicinales. Ofrecemos servicios de asesoramiento y análisis para productores, garantizando la calidad y la seguridad de sus productos.
+            </p>
+
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-microscope icon-primary"></i>
+                    <h3>Identificación y Caracterización</h3>
+                    <p>Análisis morfológico y molecular para la identificación de especies de hongos silvestres y cultivados.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-box-tissue icon-primary"></i>
+                    <h3>Cultivo y Propagación</h3>
+                    <p>Asesoramiento técnico para la producción de sustratos, preparación de inoculantes y manejo de cultivos de hongos.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-thermometer-half icon-primary"></i>
+                    <h3>Control de Condiciones Ambientales</h3>
+                    <p>Recomendaciones sobre el manejo de temperatura, humedad y ventilación para optimizar el crecimiento y rendimiento.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-pills icon-primary"></i>
+                    <h3>Análisis de Calidad y Bioactividad</h3>
+                    <p>Determinación de propiedades nutricionales y compuestos bioactivos en hongos medicinales.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hand-sparkles icon-primary"></i>
+                    <h3>Asesoramiento en Inocuidad</h3>
+                    <p>Orientación sobre buenas prácticas de producción para evitar la contaminación y asegurar la seguridad alimentaria.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-search-dollar icon-primary"></i>
+                    <h3>Viabilidad Comercial</h3>
+                    <p>Estudios de mercado y análisis de costos para la producción y comercialización de hongos.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contacto del Laboratorio de Hongos</h3>
+                <p><i class="fas fa-envelope icon-secondary"></i> Correo: <a href="mailto:laboratorio.hongos@inta.gob.ar">laboratorio.hongos@inta.gob.ar</a></p>
+                <p><i class="fas fa-phone icon-secondary"></i> Teléfono: +54 261 111-4567</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+        });
+    
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    document.body.classList.remove('loaded');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>

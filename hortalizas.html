@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de INTA - Hortalizas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-title">Servicios de INTA</h1>
+        <img src="img/logo-inta.png.png" alt="Logo de INTA" class="inta-logo">
+    </header>
+
+    <div class="container">
+        
+        <main class="main-content detail-page">
+            <h2 class="section-title">Servicios para la Producción de Hortalizas</h2>
+            <p class="intro-text">
+                El área de Hortalizas del INTA brinda asistencia técnica y análisis de laboratorio para optimizar la producción hortícola. Nuestro enfoque es mejorar el rendimiento, la sanidad y la calidad de los cultivos, tanto a campo abierto como bajo cubierta.
+            </p>
+
+            <div class="services-list">
+                <div class="service-item">
+                    <i class="fas fa-carrot icon-primary"></i>
+                    <h3>Mejoramiento Genético</h3>
+                    <p>Desarrollo y adaptación de variedades de hortalizas más resistentes y productivas, enfocadas en el mercado local.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tractor icon-primary"></i>
+                    <h3>Manejo Integrado de Cultivos</h3>
+                    <p>Asesoramiento sobre rotación de cultivos, uso eficiente de insumos y prácticas de agricultura sustentable.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-bug icon-primary"></i>
+                    <h3>Control de Plagas y Enfermedades</h3>
+                    <p>Diagnóstico de patógenos y plagas, y recomendaciones para un manejo responsable y eficaz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-seedling icon-primary"></i>
+                    <h3>Análisis de Suelo y Agua</h3>
+                    <p>Estudios de fertilidad, salinidad y pH del suelo, además de la calidad del agua de riego para maximizar la absorción de nutrientes.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-boxes icon-primary"></i>
+                    <h3>Tecnología de Poscosecha</h3>
+                    <p>Optimización de los procesos de empaque, almacenamiento y transporte para prolongar la vida útil de los productos.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-handshake icon-primary"></i>
+                    <h3>Asistencia Técnica Personalizada</h3>
+                    <p>Visitas a campo y consultoría para resolver desafíos específicos en la producción de hortalizas.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contacto del Laboratorio de Hortalizas</h3>
+                <p><i class="fas fa-envelope icon-secondary"></i> Correo: <a href="mailto:laboratorio.hortalizas@inta.gob.ar">laboratorio.hortalizas@inta.gob.ar</a></p>
+                <p><i class="fas fa-phone icon-secondary"></i> Teléfono: +54 261 333-9012</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+        });
+    
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    document.body.classList.remove('loaded');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>
